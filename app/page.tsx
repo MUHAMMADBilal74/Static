@@ -1,101 +1,87 @@
-import Image from "next/image";
+// pages/index.js
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-gray-50 text-gray-900 min-h-screen py-10 px-4">
+      <Head>
+        <title>My Resume</title>
+        <meta name="description" content="My Resume" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <header className="text-center mb-8">
+          {/* Add the image here */}
+          <img
+            src="\pic\profile.jpg" // Path to the image in the public folder
+            alt="M.Bilal Farooqui"
+            className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-300 shadow-md"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <h1 className="text-4xl font-extrabold text-gray-800">M BILAL FAROOQUI</h1>
+          <p className="text-xl text-gray-600">Software Engineer</p>
+          <div className="text-gray-600 mt-2">
+            <p>Email: bilalfarooqui74@gmail.com</p>
+            <p>Phone: 0343-3231420</p>
+            <p>Location: Shah Faisal, KHI</p>
+          </div>
+        </header>
+
+        {/* Skills Section */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Skills</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">JavaScript</h3>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">React</h3>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">Node.js</h3>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">TypeScript</h3>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">HTML/CSS</h3>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-700">Git</h3>
+            </div>
+          </div>
+        </section>
+
+        {/* Work Experience Section */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Work Experience</h2>
+          <div className="space-y-6">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-xl font-semibold text-gray-800">Software Engineer</h3>
+              <p className="text-gray-600">SPEED (PVT) LTD - KHI</p>
+              <p>Jan 2020 - Present</p>
+              <ul className="list-disc list-inside text-gray-700 mt-2">
+                <li>Developed web applications using React and Node.js</li>
+                <li>Collaborated with cross-functional teams to deliver high-quality software</li>
+                <li>Improved performance of key features by optimizing code</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-xl font-semibold text-gray-800">Junior Developer</h3>
+              <p className="text-gray-600">ACP - KHI</p>
+              <p>Jun 2018 - Dec 2019</p>
+              <ul className="list-disc list-inside text-gray-700 mt-2">
+                <li>Assisted in developing customer-facing applications</li>
+                <li>Maintained legacy systems and performed bug fixes</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer Section */}
+        <footer className="text-center text-gray-600 mt-8">
+          <p>&copy; 2024 BILAL & CO</p>
+        </footer>
+      </div>
     </div>
   );
 }
